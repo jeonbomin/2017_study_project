@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.project.dao.QnaBoardDAO">
+	<select id="getboardlist" parameterType="Map" resultType="com.java.project.dto.QnaBoard">
+		select *
+		from(
+		SELECT idx,id,contents,dateTime,reply_content,reply_date,reply_cnt,ROWNUM as rn
+		FROM qna_board <include refid="search"></include>
+		ORDER BY IDX DESC)
+		where rn <![CDATA[ > ]]> #{start} 
+		AND rn <![CDATA[ <= ]]> #{end}
+	</select>
+	<select id="selectBoardCnt" parameterType="Map" resultType="int">
+		SELECT COUNT(*) FROM qna_board
+		<include refid="search"></include>
+	</select>
+	<sql id="search">
+		where contents like '%'||#{keyword}||'%' OR id like '%'||#{keyword}||'%' OR reply_content like '%'||#{keyword}||'%'
+	</sql>
+
+	<insert id="qnainsert" parameterType="com.java.project.dto.QnaBoard">
+		insert into qna_board
+		values((SELECT NVL(MAX(idx), 0)+1 
+			FROM qna_board),#{id},#{contents},sysdate,'','',0)
+	</insert>
+	<update id="awrapProc" parameterType="com.java.project.dto.QnaBoard">
+		update qna_board set reply_content=#{reply_content}, reply_date=sysdate, reply_cnt=1 
+		where idx = #{idx} 	
+	</update>
+</mapper>

@@ -1,0 +1,30 @@
+/*HOME START*/
+.main_container{display:flex;flex-direction:column;width:100%;}
+	.main_head{margin:30px 46%;}
+	.main_head a{display:block;font-size:0;background:url('../img/main.png') no-repeat;width:120px;height:120px;margin-bottom:10px;}
+	.log{position:absolute;top:10px;right:100px;font-family: sans-serifserif;}
+	.log a:visited,a:link{color:#747474;}
+	#nav {height: 55px;padding: 6px 7px;margin: 0;background:#7d7d7d;}
+  	#nav li {float: left; position: relative; margin:5px 10px; padding: 0;}
+  	#nav li a {display:block;font:1em "굴림";font-weight:bold;padding:10px 20px;color: #e7e5e5;text-shadow:0 1px 1px rgba(0,0,0,.3);}
+  	#nav li:hover > a{background:#ebebeb;color:#444;text-shadow: 0 1px 1px rgba(255,255,255,1);  border-radius:1.4em;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.2);}
+  	
+  	#nav li:hover ul{display:block;opacity:1;}
+
+  	#nav ul {z-index:999;position: absolute;left: 0;top:45px;width: 150px;background:#ddd;border:1px solid #b4b4b4;border-radius:8px;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.3);-moz-box-shadow:0 1px 3px rgba(0,0,0,.3);box-shadow:0 1px 3px rgba(0,0,0,.3);opacity: 0;}
+  	#nav ul li {float:none;margin:0;padding:0;}
+  	#nav ul a {font-weight:normal;text-shadow:0 1px 0 #fff;color:#333;}
+	#nav ul li:hover a{background:#0078ff;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.1);}
+
+	.content{background:url('../img/back.jpg');}
+	.board{margin:10% 10%;position:relative;left:10%;}
+	.board h2{margin-bottom:10px;padding-bottom:10px;border-bottom: 1px solid #666;}
+	.board ul{padding-left:20px;list-style:disc; line-height:30px;}
+		#boardline{margin-bottom:60px;}
+	  	#board1{width:450px;margin-right:50px;display:inline-block;}
+		#board2{width:450px;display:inline-block;}
+		#board3{width:450px;margin-right:50px;display:inline-block;}
+		#board4{width:450px;display:inline-block;}
+
+	footer{border-top:1px solid #666;background:#666;color:#fff;letter-spacing:1px;text-align:center;padding:20px 0;}	
+/*HOME END*/

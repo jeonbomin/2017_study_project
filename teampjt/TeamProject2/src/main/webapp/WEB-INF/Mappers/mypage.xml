@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.project.dao.mypageDAO">
+	<select id="mypageForm" parameterType="String" resultType="String">
+		Select email from membership
+		where id=#{id}
+	</select>
+	<select id="editpw" resultType="int" parameterType="Map">
+		SELECT COUNT(*) FROM membership
+		where id=#{edit_id} and pw=#{edit_pw}
+	</select>
+	<update id="editProc" parameterType="Map">
+		<choose>
+			<when test="edit_email == ''">
+				update membership set pw=#{nwpw}
+				where id = #{edit_id}
+			</when>
+			<otherwise>
+				update membership set pw=#{nwpw},email=#{edit_email}||#{edit_email2}
+				where id = #{edit_id}
+			</otherwise>
+		</choose>
+	</update>
+</mapper>

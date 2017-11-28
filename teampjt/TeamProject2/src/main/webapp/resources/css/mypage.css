@@ -1,0 +1,25 @@
+.wrap{padding:40px 20%;} 
+
+	/* aside */
+	.my_aside{position:fixed;right:calc(4% + 10px);right:-ms-calc(4% + 10px);top:80px;}
+	.my_aside a{display:block;width:53px;height:53px;font-size:0;}
+	.my_aside a:nth-child(1){background:url('../img/list.png') no-repeat;}
+
+	/* member edit, tb1 */
+	.mem_edit h2,.myboard h2{margin-bottom:30px;}
+	.mem_edit button{margin-left:10px;width:80px;height:30px;}	
+
+	.tb1{border-top:2px solid #666;width:100%;line-height:20px;}
+	.tb1 td,th{padding:20px 15px;border-bottom:1px solid #D5D5D5;}
+	.tb1 span{font-weight:bold;}
+	    .e_wrap{display:none;padding:10px 0 0;}
+	    .e_wrap.active{display:block;}
+	    .mungu{margin-left:30px;color:#f12;}
+	.tb1 .sec2_tbody td{text-align:center;}	    
+
+	/* button */
+	.btn{padding:30px 0;text-align:right;}
+	
+	/* myboard,tb2 */
+	.myboard{margin-top:20px;}
+	

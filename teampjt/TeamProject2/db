@@ -1,0 +1,63 @@
+CREATE TABLE qna_board
+(
+    idx              INT             NOT NULL, 
+    id               VARCHAR2(30)    NULL, 
+    contents         CLOB            NULL, 
+    datetime         date    	 	 NULL, 
+    reply_content    CLOB            NULL, 
+    reply_date		 date			 NULL,
+    reply_cnt        int             NULL,
+    CONSTRAINT QNA_BOARD_PK PRIMARY KEY (idx)
+)
+
+select * from qna_board
+ORDER BY IDX DESC
+drop table qna_board
+
+CREATE SEQUENCE SEQ_qna_board
+  START WITH 1
+  INCREMENT BY 1
+  NOMAXVALUE
+  NOCACHE;
+
+  (SELECT NVL(MAX(idx), 0)+1 
+			FROM BOARD)
+
+delete from qna_board where reply_cnt = 0
+			
+insert into qna_board
+values((SELECT NVL(MAX(idx), 0)+1 
+			FROM qna_board),'z222z','f222f',sysdate,'','',0)
+
+SELECT 
+			id,contents,dateTime
+		FROM qna_board
+		
+select *
+from(
+SELECT idx,id,contents,dateTime,reply_content,reply_date,reply_cnt,ROWNUM as rn
+		FROM qna_board)
+		where contents like '%%' OR
+		rn > 1 
+		AND rn <= 7
+		ORDER BY IDX DESC
+		
+		OR id like '%'||#{keyword}||'%' OR reply_content like '%'||#{keyword}||'%'
+		
+		
+CREATE TABLE membership
+( 
+    id               VARCHAR2(40)   not NULL, 
+    pw         		 VARCHAR2(40)   not NULL, 
+    email         	 VARCHAR2(60)   not NULL,
+    CONSTRAINT membership_PK PRIMARY KEY (id)
+)
+
+select * from membership
+
+insert into membership
+values('aaaadddd','1234','skc1308@naver.com')
+
+update membership set pw='11',email='skc1308+@naver.com'
+				where id = 'aaaadddd'
+		

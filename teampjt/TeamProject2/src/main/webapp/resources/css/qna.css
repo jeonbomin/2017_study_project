@@ -1,0 +1,64 @@
+	/*h1*/
+	.title{padding:30px 0 0;font-size:30px;text-align:center;letter-spacing:10px;}	
+	
+	/*start*/
+	.qna_wrap{padding:2% 10% 5% 10%;width:100%;}
+		.qna_wrap h2{position:relative;margin:0 0 20px 0;padding:10px 0 10px 25px;line-height:26px;font-size:24px;font-weight:normal;}
+		.qna_wrap h2:before{display:block;position:absolute;left:0;top:50%;margin-top:-5px;width:10px;height:10px;border-radius:50%;background:#777;content:'';}
+		.qna_wrap h2 strong{font-size:26px;font-weight:bold;vertical-align:top;}	
+	.qna_list{list-style:none;border-bottom:1px solid #ddd;}
+		.qna_list li{position:relative;padding:20px;border-top:1px solid #ddd;}
+		.qna_list li:before{display:block;position:absolute;right:24px;top:30px;width:20px;height:20px;
+			border-left:1px solid #bbb;border-top:1px solid #bbb;transform:rotate(-135deg);content:'';}
+		.qna_list li:hover{background:#fafafa;}
+	
+	.q_wrap{position:relative;padding:0 45px 0 40px;cursor:pointer;}
+		.q_wrap:before{display:block;position:absolute;left:0;top:0;width:30px;height:30px;line-height:28px;
+			font-size:14px;color:#fff;text-align:center;border-radius:50%;background:#333;content:'Q';}
+	.reply_frm{font-size:0;}
+	.reply_frm textarea{padding:10px;width:90%;height:60px;font:13px '¸¼Àº °íµñ', 'malgeon gothic', 'µ¸¿ò', dotum, sans-serif;
+		color:#1d1c1c;border:1px solid #999;vertical-align:middle;resize:none;}
+	.reply_frm button{width:10%;height:60px;}
+	.q_user{line-height:30px;font-weight:bold;}
+	.q_date{margin-left:10px;line-height:30px;}
+	.q_cont{padding:15px 0 0 0;line-height:20px;}
+
+	.a_wrap{display:none;position:relative;padding:35px 0 0 62px;}
+		.a_wrap:before{display:block;position:absolute;left:22px;top:30px;width:30px;height:30px;
+			line-height:28px;font-size:14px;color:#fff;text-align:center;border-radius:50%;background:#777;
+			content:'A';}
+		.a_wrap.active{display:block;}
+	.a_wrap_view{display:none;position:relative;padding:35px 0 0 62px;}
+		.a_wrap_view:before{display:block;position:absolute;left:22px;top:30px;width:30px;height:30px;
+				line-height:28px;font-size:14px;color:#fff;text-align:center;border-radius:50%;background:#777;
+				content:'A';}
+		.a_wrap_view.active{display:block;}
+	.a_date{line-height:20px;float:right;}
+	.a_edit{float:right;}
+	.a_edit:hover{text-decoration: underline;cursor:pointer;}
+	.a_cont{padding:0 120px 0 0;line-height:20px;}
+
+	.qna_form{font-size:0;}
+	.qna_form textarea{padding:10px;width:90%;height:60px;font:13px '¸¼Àº °íµñ', 'malgeon gothic', 'µ¸¿ò', dotum, sans-serif;
+		color:#1d1c1c;border:1px solid #999;vertical-align:middle;resize:none;}
+	.qna_form button{width:10%;height:60px;}
+	
+
+	.qna_pager{margin:20px 0 20px;font-size:0;text-align:center;}
+	.qna_pager a{display:inline-block;width:20px;height:20px;line-height:20px;font-size:13px;color:#777;text-decoration:none;vertical-align:middle;}
+	.qna_pager a:hover{color:#333;text-decoration:underline;}
+	.qna_pager a:hover:before{color:#333;}
+	.qna_pager a[class]{position:relative;font-size:0;text-indent:-100%;}
+	.qna_pager a[class]:before{display:block;position:absolute;left:0;top:0;width:20px;height:20px;font-size:13px;text-indent:0;}
+	.qna_pager a.prev1{margin:0 10px 0 5px;}
+	.qna_pager a.prev1:before{content:'<';}
+	.qna_pager a.next1{margin:0 5px 0 10px;}
+	.qna_pager a.next1:before{content:'>'}
+	
+	.qna_notice{padding:10px 5px;color:#d11;}
+	.qna_notice:before{margin-right:5px; content:'*';}
+	
+	.frm2{text-align:right;}
+		#keyword{height:24px; }
+		#searchBtn{height:24px;}
+	/*end*/
